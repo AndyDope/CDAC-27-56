@@ -1,5 +1,5 @@
 package com.cdac.jdbc;
 
-public class ToGit {
+public class CommitToGit {
 
 }

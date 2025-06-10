@@ -1,0 +1,152 @@
+/*
+ * style.css
+ * Global styles for the Online Shopping Website
+ * Color Palette: Serene Teal
+ */
+
+/* --- Color Variables (Optional but highly recommended for maintainability) --- */
+/*
+   By defining these as CSS variables, you can easily reuse them throughout your
+   CSS without repeatedly typing hex codes.
+*/
+:root {
+    --primary-accent: #20B2AA;      /* Light Sea Green */
+    --secondary-accent: #66CDAA;    /* Medium Aquamarine */
+    --neutral-background: #E0FFFF;  /* Light Cyan */
+    --dark-text-bg: #008080;        /* Teal */
+    --white: #ffffff;
+    --gray-100: #f8f9fa; /* Bootstrap default light gray */
+    --gray-200: #e9ecef;
+}
+
+/* --- Global Body & Text Styles --- */
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    background-color: var(--gray-100); /* Use a light gray from Bootstrap for main background */
+    color: var(--dark-text-bg); /* Default text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full viewport height for centered layouts */
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--dark-text-bg); /* Headings use the dark teal */
+    margin-bottom: 0.5em;
+    font-weight: 600;
+}
+
+a {
+    color: var(--primary-accent); /* Links use primary accent */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--dark-text-bg); /* Darker teal on hover */
+    text-decoration: underline;
+}
+
+/* --- Bootstrap Overrides & Custom Components --- */
+
+/* Primary Buttons */
+.btn-primary {
+    background-color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    color: var(--white); /* Ensure text is white on primary buttons */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-text-bg); /* Darker teal on hover */
+    border-color: var(--dark-text-bg);
+    color: var(--white);
+}
+
+/* Secondary Buttons (optional, but good for alternate actions) */
+.btn-secondary {
+    background-color: var(--secondary-accent);
+    border-color: var(--secondary-accent);
+    color: var(--white);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-accent); /* Primary accent on hover for secondary */
+    border-color: var(--primary-accent);
+    color: var(--white);
+}
+
+/* Form Controls */
+.form-control:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 0.25rem rgba(32, 178, 170, 0.25); /* Light Sea Green with transparency */
+}
+
+/* Card-like containers (e.g., login-container, product cards) */
+.card, .login-container { /* Applying these styles to Bootstrap's .card and your custom .login-container */
+    background-color: var(--white);
+    border: 1px solid var(--gray-200); /* Subtle border */
+    border-radius: 0.5rem; /* Rounded corners */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); /* Light shadow */
+}
+
+/* Background Utility Classes */
+.bg-primary-accent {
+    background-color: var(--primary-accent) !important;
+}
+
+.bg-neutral-background {
+    background-color: var(--neutral-background) !important;
+}
+
+/* Text Utility Classes */
+.text-primary-accent {
+    color: var(--primary-accent) !important;
+}
+
+.text-dark-text-bg {
+    color: var(--dark-text-bg) !important;
+}
+
+/* --- Specific Page Styles (e.g., Login Page) --- */
+/* (Keeping some specific styles for fine-tuning the login page layout) */
+.login-container {
+    max-width: 400px;
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.login-container .btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+/* --- Navigation Bar (Example for future use) --- */
+.navbar {
+    background-color: var(--dark-text-bg); /* Dark teal for navbar background */
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--neutral-background) !important; /* Light text for navigation items */
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--white) !important;
+}
+
+/* --- Footer (Example for future use) --- */
+.footer {
+    background-color: var(--dark-text-bg);
+    color: var(--neutral-background);
+    padding: 20px 0;
+    text-align: center;
+}
